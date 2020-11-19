@@ -12,6 +12,7 @@ function createIsomorphicLink() {
     // server
     const { SchemaLink } = require("@apollo/client/link/schema");
     const { schema } = require("./schema");
+    // If your Apollo Server uses DataSources, pass them in with your schema via SchemaLink's context option below
     return new SchemaLink({ schema });
   } else {
     // client
